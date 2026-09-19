@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lilacs out of the dead land, Pt. 2 — jim</title>
-<meta name="description" content="A field guide to the machine economy, mid-2026. Preview — full version on Substack.">
+<meta name="description" content="A field guide to the machine economy, mid-2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -26,25 +26,22 @@
   .meta{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--dim);letter-spacing:.16em;margin-bottom:5vh;border-bottom:1px solid var(--line);padding-bottom:2rem}
   h2{font-weight:400;font-style:italic;color:var(--mint);font-size:1.3rem;margin:3rem 0 1rem}
   p{font-size:1.08rem;line-height:1.75;margin-bottom:1.3rem;color:var(--text)}
+  ul{margin:0 0 1.5rem 1.4rem}
+  li{font-size:1.05rem;line-height:1.7;margin-bottom:.6rem;color:var(--text)}
   a{color:var(--mint)}
-  em{color:var(--cyan)}
+  em{color:var(--cyan);font-style:italic}
+  strong{color:var(--cyan);font-weight:500}
   .rule{border:none;border-top:1px solid var(--line);margin:3.5rem 0}
-  .paywall{
-    margin-top:4rem;padding:2.2rem;border:1px solid var(--line);border-radius:10px;
+  .refs{font-size:.98rem;line-height:1.7}
+  .refs li{margin-bottom:.75rem;color:var(--dim)}
+  .note{font-size:.95rem;color:var(--dim);margin-top:1.5rem;font-style:italic}
+  .end{
+    margin-top:4rem;padding:2rem;border:1px solid var(--line);border-radius:10px;
     background:linear-gradient(180deg, rgba(138,255,209,.05), rgba(155,232,255,.02));
-    text-align:center;
+    text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--dim);
   }
-  .paywall p{color:var(--dim);font-size:.98rem}
-  .btn{
-    display:inline-block;margin-top:.6rem;padding:.75rem 1.6rem;border:1px solid var(--mint);border-radius:999px;
-    font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--mint);text-decoration:none;transition:background .25s,color .25s;
-  }
-  .btn:hover,.btn:focus-visible{background:var(--mint);color:#04110c}
-  .fade{
-    -webkit-mask-image:linear-gradient(180deg,#000 40%,transparent 100%);
-    mask-image:linear-gradient(180deg,#000 40%,transparent 100%);
-  }
+  .end a{color:var(--mint)}
 </style>
 </head>
 <body>
@@ -52,28 +49,89 @@
   <p class="crumb"><a href="../../">jim</a> / <a href="../">blog</a> / lilacs pt. 2</p>
   <h1>Lilacs out of the dead land, Pt.&nbsp;2</h1>
   <p class="dek">Constantly articulating what we know to be the new reality — the mid-2026 snapshot.</p>
-  <p class="meta">JUL 2026 · PREVIEW · FULL VERSION ON SUBSTACK</p>
+  <p class="meta">JUL 2026 · FULL ARTICLE</p>
 
-  <p><em>This one started, honestly, as a late-night attempt to explain the entire AI economy to a family member over iMessage — one message at a time, one video at a time, until it was past 1&nbsp;a.m. and I realized I'd accidentally written the sequel to <a href="https://jimsuley.substack.com/p/lilacs-out-of-the-dead-land">Part&nbsp;1</a>. So here it is, cleaned up and expanded: a field guide to the machine economy as it stands in July 2026, written for anyone still catching up — and aren't we all.</em></p>
+  <p><em>This one started, honestly, as a late-night attempt to explain the entire AI economy to a family member over iMessage — one message at a time, one video at a time, until it was past 1&nbsp;a.m. and I realized I'd accidentally written the sequel to <a href="https://jimsuley.substack.com/p/lilacs-out-of-the-dead-land">Part&nbsp;1</a>. So here it is, cleaned up and expanded: a field guide to the machine economy as it stands in July 2026, written for anyone still catching up — and aren't we all. All of the videos and links referenced are collected at the bottom.</em></p>
+
+  <hr class="rule">
 
   <h2>I. The Magnificent Seven</h2>
   <p>Everyone in America can basically eat because of a handful of companies. We used to call them FANG, then MANGA; now the top of the market goes by the Magnificent Seven, and they practically hold up the S&amp;P&nbsp;500 with the majority of its worth. The newest permanent resident of that club — and the one this whole story orbits — is NVIDIA.</p>
-  <p>If you want to date the moment the broader public noticed, it's easy: ChatGPT's release, and the weeks after, when it reached 100 million users faster than any product in the history of the internet. That event repriced our economy, and NVIDIA has been trading places at the very top of the index ever since.</p>
+  <p>If you want to date the moment the broader public noticed, it's easy: ChatGPT's release, and the weeks after, when it reached 100 million users faster than any product in the history of the internet — millions in a single week. That event repriced our economy, and NVIDIA has been trading places at the very top of the index ever since.</p>
 
   <h2>II. The graphics-card company</h2>
-  <p>NVIDIA makes the graphics card sitting in my own computer. The academic story runs through people like Geoffrey Hinton and the early researchers who discovered that inexpensive consumer GPUs — the same silicon sold for video games — were dramatically better at the mathematics underneath machine learning than the CPUs everyone had been using. Graphics processors turned out to be ideal for the linear algebra behind transformer models: take folders and folders of information, compress it, "pre-train" on it, and out comes a large language model that can tell you what makes an olive an olive and not a piece of broccoli — and everything else besides.</p>
-  <p>The founding story is stranger than most people know. Jensen Huang got roughly $5 million from Sega on a trip to Japan to build gaming processors, and the company nearly failed anyway. They clawed their way out through arcade machines — the Mortal Kombat cabinets some of us were feeding quarters into — and then into home gaming. Today gaming is closer to 10% of the business.</p>
+  <p>NVIDIA makes the graphics card sitting in my own computer. The academic story runs through people like Geoffrey Hinton and the early researchers who discovered that inexpensive consumer GPUs — the same silicon sold for video games — were dramatically better at the mathematics underneath machine learning than the CPUs everyone had been using. Graphics processors turned out to be ideal for the linear algebra behind transformer models: take folders and folders of information, compress it, "pre-train" it with fine-tuned settings, and out comes a large language model that can tell you what makes an olive an olive and not a piece of broccoli — and everything else besides.</p>
+  <p>The founding story is stranger than most people know. Jensen Huang got roughly $5 million from Sega on a trip to Japan to build gaming processors, and the company nearly failed anyway. They clawed their way out through arcade machines — the Mortal Kombat cabinets some of us were feeding quarters into — and then into home gaming. Today gaming is closer to 10% of the business. Micron has reportedly converted some factories away from ordinary RAM entirely, just to feed AI memory demand. The pivot is total.</p>
+  <p>Because after ChatGPT released and people discovered you can just <em>ask a question</em> and the model prints an answer, everything connected to that pipeline increased in value.</p>
 
-  <div class="fade">
-    <h2>III. A brief detour through the periodic table</h2>
-    <p>A few asides worth knowing, because the machine economy is also a materials economy. Gold isn't a U.S. company stock, but it's still in the story — it's used as connector plating in computers, because those connections need resilience in conducting electricity, and it shows up in nearly every phone at well under 1% by weight, alongside cobalt…</p>
-    <p>Nickel is now used more efficiently in cars than almost anywhere else, and the editor wars are only getting started — Visual Studio Code, the MIT license, the fork that became Cursor, and the 40,000 engineers at&nbsp;…</p>
-  </div>
+  <h2>III. A brief detour through the periodic table</h2>
+  <p>A few asides worth knowing, because the machine economy is also a materials economy:</p>
+  <ul>
+    <li><strong>Gold</strong> isn't a U.S. company stock, but it's still in the story — it's used as fine-tuned connector plating in computers, because those connections need resilience in conducting electricity. It shows up in nearly every phone and computer at well under 1% by weight, alongside other precious minerals in iPhones, like cobalt.</li>
+    <li><strong>Nickel</strong> is now used more efficiently in cars than almost anywhere else — Tesla has been the standout there.</li>
+  </ul>
+  <p>Small percentages, planetary quantities.</p>
 
-  <div class="paywall">
-    <p>The full version — the OpenAI diaspora, Colossus, Jensen the showman, the 22-year-old who emailed me, what I actually pay for, and every referenced video collected at the end — continues on Substack.</p>
-    <a class="btn" href="https://jimsuley.substack.com">Read the full version →</a>
-  </div>
+  <h2>IV. The editor wars</h2>
+  <p>Microsoft's Visual Studio Code is the integrated development environment — the IDE — where an enormous share of the world's engineers write code, with Copilot built in. Because VS Code was released under the free MIT open-source license, it could be legally forked — copied — and that's exactly what Cursor did. What started at cursor.sh became <a href="https://cursor.com">cursor.com</a>, built by Anysphere.</p>
+  <p>The adoption curve has been vertical. Jensen Huang has said on television that NVIDIA's roughly 40,000 engineers use Cursor — and I do too, which we'll get to.</p>
+
+  <h2>V. The OpenAI diaspora</h2>
+  <p>OpenAI was named by Elon Musk and founded as a non-profit — it was supposed to be open-source, the way projects like Umbrel are — recruiting the people out of Meta and Google who had worked on the transformer models. What happened next is the most consequential talent explosion in modern business:</p>
+  <ul>
+    <li><strong>Dario Amodei</strong> left with his sister Daniela and founded <strong>Anthropic</strong>, whose model Claude has, for long stretches, simply been the best available. Anthropic remains a private company, yet operates at a scale that would put it comfortably in the top 20 largest companies — and will likely stay in the top 10, <em>if</em> the free, fast, cheap Chinese open-weight models don't bankrupt everyone's margins first.</li>
+    <li><strong>Mira Murati</strong>, OpenAI's former CTO, left and founded <strong>Thinking Machines</strong>, which released Tinker — a product I also work with.</li>
+    <li><strong>Ilya Sutskever</strong> created <strong>SSI — Safe Superintelligence</strong> — after leaving during the disagreements with Sam Altman, to fund his own direction entirely.</li>
+  </ul>
+  <p>And the wealth effects are real: the early OpenAI employees who left made fortunes in the liquidity events, then hired small teams of researchers of their own. Between NVIDIA and SpaceX equity, ordinary employees who put in their twenty years became deca-millionaires nearly overnight — somewhere between one and twenty million dollars each, for a population of maybe 1,000–5,000 people who happened to be holding those portfolios. Look at a San Francisco home-price chart from those years and you can watch it happen.</p>
+
+  <h2>VI. Colossus, and the namesake</h2>
+  <p>Based in Silicon Valley — SF and Palo Alto, where SpaceX also sits — some of the largest buildings ever constructed are now data centers. Grok was trained on that infrastructure, and Anthropic now reportedly pays for capacity in the building called <strong>Colossus</strong>. Fittingly, Colossus was also the name of one of the first computers ever built — the namesake loops all the way back to the 1940s.</p>
+  <p>And then the deal that made everyone blink: <strong>SpaceX officially acquired Cursor</strong>, in a transaction reported at around $50 billion, making Michael Truell a billionaire at 25. Some of these companies are good at coding, others at research — Claude is best at research — and now one of them literally builds rockets.</p>
+
+  <h2>VII. Interlude from the home lab</h2>
+  <p>I should say where I'm writing this from. Years ago I built my own Bitcoin Lightning node — an Umbrel, assembled myself on a workbench, before any of this was fashionable. The graphics card in my machine is a consumer PNY unit, the same architecture the labs found so much more efficient at the calculations. The difference now is scale: the same idea, but rack-sized, warehouse-sized, city-block-sized.</p>
+
+  <h2>VIII. Jensen, showman</h2>
+  <p>Jensen Huang also gives very good presentations — that matters more than people admit. The recent NVLink Spine reveal has him standing on stage holding a connector that moves more data than the traffic of the entire internet, with over 100 terabytes per second across coaxial cabling. He is the CEO of the #1 company holding, in his hands, a piece of very impressive engineering — throughput exceeding the internet itself, at once.</p>
+  <p>The history has a cinematic symmetry to it. Over ten years ago, Jensen personally drove the first AI supercomputer — the DGX-1 — to the OpenAI office and handed it to Elon Musk, back when it was not supposed to be a for-profit company at all. This year, a DGX Spark arrived at SpaceX in the same hand-delivered fashion, in commemoration; the machine is much smaller now, and immeasurably more powerful. They sell them to consumers too — many developers I know bought a few. I don't think it's out of reach for people like me either.</p>
+  <p>And when CNBC sat him down under the chyron "IS THERE AN AI BUBBLE?", the answer he gave was the quiet part: he wants to be part of almost everything Elon Musk is involved in.</p>
+
+  <h2>IX. The 22-year-old who emailed me</h2>
+  <p>Here's the personal one. When I worked in the Umbrel ecosystem, Michael Truell — now CEO of Cursor, a tall ginger guy — was emailing me and other candidates directly. He was about 22. I'll be honest: I didn't think they would be that successful, and that more incumbents would simply do what they were doing. I was quickly wrong, and then I really started to like Cursor — I've used it heavily for two years now, at Umbrel and since.</p>
+  <p>His opening keynote at Compile 26 is worth your time; he's also just a good speaker. Very <em>akıllı</em> — sharp — and a good guy, from every interaction I've had.</p>
+
+  <h2>X. What I actually pay for</h2>
+  <p>For the practically-minded, my stack: <strong>Cursor Pro</strong> at $20/month, <strong>Claude Pro</strong> and <strong>SuperGrok</strong> at roughly $8 and $20. All of them are incredibly powerful, and <a href="https://openrouter.ai">openrouter.com</a> lets you compare Anthropic's, Google's, and xAI's models side by side — which ones are better genuinely changes almost every single day of the week. It's a race.</p>
+  <p>One underrated consequence: engineers at companies buying AMD hardware no longer need to talk to AMD's own engineers — they can use Claude to program against AMD chips and build on the hardware without hand-holding, which is historically unprecedented. AMD has said as much themselves. I put my write-up around the AMD story — including CEO Lisa Su's recent interview, where she addressed the AMD/Anthropic relationship — on the home page of my site, <a href="https://4thsol.online">4thsol.online</a>. (For the uninitiated: AMD makes CPUs, like Intel.)</p>
+
+  <h2>XI. The media layer</h2>
+  <p>If you want to keep up without doing what I just did to my sleep schedule, the answer is still <a href="https://www.tbpn.com/">TBPN</a> — Jordi Hays and John Coogan, a show every weekday, with essentially all the CEOs and companies in this article rotating through. OpenAI reportedly put serious money behind their media operation, and I like them for the same reason I recommended them in Part 1: they leave politics out of the analysis entirely. Nearly every company I apply to turns out to be talking to them.</p>
+
+  <h2>XII. Lilacs, again</h2>
+  <p>I wouldn't mind working at one — I've applied again, to a few of these companies and the ones orbiting them, and I intend to be part of one of them one day. That's the honest conclusion of the story: the dead land of the post-2020 economy keeps breeding lilacs, exactly like the poem warned it would, and the only real question left is whether you're planting or watching.</p>
+  <p>Part 3 next year, or whenever the next domino falls — whichever comes first.</p>
+
+  <hr class="rule">
+
+  <h2>Referenced media &amp; where to find it</h2>
+  <p><em>The thread this article came from was full of shared videos and links. Rather than screenshots, here is the content itself:</em></p>
+  <ol class="refs">
+    <li><strong>"President Kennedy's Speech at Rice University"</strong> — YouTube (the "we choose to go to the moon" address; the archival upload is on several channels including NASA's).</li>
+    <li><strong>All-In Podcast — "Saving Open Source: The Fight Over Open Source AI, Anthropic's $1.5B Payout, NYC Socialists: Evictions = Violence?"</strong> — YouTube, All-In Podcast channel.</li>
+    <li><strong>"NVIDIA's NVLink Spine Outpaces the Entire Internet — Welcome to the AI Superhighway"</strong> — YouTube.</li>
+    <li><strong>"Jensen, CEO of Nvidia, delivering the first AI supercomputer to Elon Musk for OpenAI" — ORB Network</strong> — YouTube.</li>
+    <li><strong>"DGX Spark Arrives at SpaceX: Jensen Huang and Elon Musk Launch AI Future"</strong> — YouTube / NVIDIA newsroom (nvidianews.nvidia.com).</li>
+    <li><strong>"Nvidia CEO Jensen Huang: Want to be part of almost everything Elon Musk is involved in"</strong> — CNBC Squawk Box, on YouTube and cnbc.com.</li>
+    <li><strong>"Opening Keynote, Michael Truell | Compile 26"</strong> — YouTube / cursor.com.</li>
+    <li><strong>"AMD CEO Lisa Su Live on TBPN"</strong> — YouTube, TBPN channel / tbpn.com.</li>
+    <li><strong>Cursor — cursor.com</strong> ("The new way to build software").</li>
+    <li><strong>TechCrunch — techcrunch.com</strong> (startup and technology news referenced throughout).</li>
+    <li><strong>My own site &amp; the Lisa Su interview feature — <a href="https://4thsol.online">4thsol.online</a></strong>, and <strong><a href="https://jimsuley.substack.com/p/lilacs-out-of-the-dead-land">Part 1 of this series</a></strong>.</li>
+  </ol>
+  <p class="note">If any single link has rotted by the time you read this, the titles above will surface each item on YouTube search, tbpn.com, cnbc.com, nvidianews.nvidia.com, or techcrunch.com — five reliable places this material lives.</p>
+
+  <div class="end">also published on <a href="https://jimsuley.substack.com">substack</a></div>
 </main>
 </body>
 </html>
